@@ -1,7 +1,9 @@
 # EAST_easy
 
 Projet 1 : EAST easy
+
 Groupe de travail : ELUMALAI Gounavadhy & SQUALLI Houda
+
 Enseignant : Mr COURTAUD Didier
 
 Logiciels utilisés : 
