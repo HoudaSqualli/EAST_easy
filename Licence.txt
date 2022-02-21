@@ -1,0 +1,2 @@
+Concernant la licence utilisé pour ce projet, nous avons utilisé une licence libre de droit, la licence CC BY-NC-SA 2.0 FR. Voici le lien pour pouvoir la consulter :
+https://creativecommons.org/licenses/by-nc-sa/2.0/fr/legalcode
