@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<?xml-model href="EAST.xsd"?>
+<EAST transition="burst">
+<AFFICHAGE>
+    <POLICETEXTE font="Comic Sans MS"/>
+</AFFICHAGE>
+<PIEDPAGE_GAUCHE> Tutoriel EAST </PIEDPAGE_GAUCHE>
+<PIEDPAGE_DROITE> 22 Février 2022 </PIEDPAGE_DROITE>
+
+<PAGE>
+<TIRE_PAGE>
+    <TIRE> 
+        EAST EAsy Slide ToolKit
+    </TIRE>
+</TIRE_PAGE>
+<PARTIE> 
+    <TITRE>
+        INTRODUCTION
+    </TITRE>
+    <SECTION>
+        <PARAGRAPHE>
+                EAST (EAsy Slide ToolKit est un éditeur de présentation qui s'appuie sur un fichier XML et portable sur tous les navigateurs. Le fichier XML est automatiquement validé par le schéma XML et traduit en HTML par une feuille de style XSLT. 
+        </PARAGRAPHE>
+    </SECTION>
+    <SECTION>
+        <PARAGRAPHE>
+            Notre projet consiste à fournir une interface web pour la saisie vocale des présentations. 
+        </PARAGRAPHE>
+    </SECTION>
+    <SECTION>
+        <TITRE>
+           Objectifs du projets :
+        </TITRE>
+        <LISTE>
+            <EL>Créer une interface web de saisie vocale des présentation enétant pas en ligne</EL>
+            <EL>Utiliser Pocketsphinx.js, Vosk ou Serenade</EL>
+            <EL>Repértorier les mots clés pour la créations des balises XML </EL>
+            <EL>Trouver un mécanise de sélection de balises ou du contenu</EL>
+            <EL>Contrôler les balises possibles par le schéma XML </EL>
+        </LISTE>
+    </SECTION>
+</PARTIE>
+</PAGE>
+
+<PAGE>
+
+
+
+</PAGE>
+</EAST>

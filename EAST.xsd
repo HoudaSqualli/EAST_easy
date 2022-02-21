@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="EAST">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="AFFICHAGE">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="POLICETEXTE">
+                                <xs:complexType>
+                                    <xs:attribute name="font" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PIEDPAGE_GAUCHE" type="xs:string" />
+                <xs:element name="PIEDPAGE_DROITE" type="xs:string" />
+                <xs:element name="PAGE" maxOccurs="unbounded">
+                    <xs:complexType mixed="true">
+                        <xs:sequence minOccurs="0">
+                            <xs:element name="TIRE_PAGE" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="TIRE" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="PARTIE" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="TITRE" type="xs:string" />
+                                        <xs:element name="SECTION" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence minOccurs="0">
+                                                    <xs:element name="PARAGRAPHE" minOccurs="0" type="xs:string" />
+                                                    <xs:element name="TITRE" minOccurs="0" type="xs:string" />
+                                                    <xs:element name="LISTE" minOccurs="0">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="EL" maxOccurs="unbounded" type="xs:string" />
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="transition" use="required" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

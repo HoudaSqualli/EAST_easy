@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="CONFIGURATION">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="RACINE">
+                    <xs:complexType>
+                        <xs:attribute name="element" use="required" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MENUS">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MENU">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="MENU_INSERTION" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:attribute name="nom" use="required" />
+                                                <xs:attribute name="type_noeud" use="required" fixed="element" />
+                                                <xs:attribute name="raccourci" />
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="nom" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="AFFICHAGE_NOEUDS">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="AFFICHAGE_ELEMENT" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence minOccurs="0">
+                                        <xs:element name="PARAMETRE" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:attribute name="nom" use="required" />
+                                                <xs:attribute name="valeur" use="required" />
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="element" use="required" />
+                                    <xs:attribute name="type" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="EXPORTS">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="EXPORT">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="FICHIER_XSL">
+                                            <xs:complexType>
+                                                <xs:attribute name="nom" use="required" />
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="nom" use="required" />
+                                    <xs:attribute name="sortie" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

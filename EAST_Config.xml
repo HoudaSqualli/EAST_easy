@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+
+
+<?xml-model href="EAST_Config.xsd"?>
+<CONFIGURATION>
+
+<RACINE element="EAST"/>
+
+<MENUS>
+    <MENU nom = "organisation">
+        <MENU_INSERTION nom = "TIREPAGE" type_noeud="element"/>
+        <MENU_INSERTION nom="PARTIE" type_noeud="element"/>
+        <MENU_INSERTION nom="TITRE" raccourci="T" type_noeud="element"/>
+        <MENU_INSERTION nom="PIEDPAGE_GAUCHE" type_noeud="element"/>
+        <MENU_INSERTION nom="PIEDPAGE_DROIT" type_noeud="element"/>
+        <MENU_INSERTION nom="SECTION" raccourci="S" type_noeud="element"/>
+        <MENU_INSERTION nom="PARAGRAPHE" raccourci="P" type_noeud="element"/>
+        <MENU_INSERTION nom="LISTE" raccourci="L" type_noeud="element"/>
+        <MENU_INSERTION nom="EL" raccourci="I" type_noeud="element"/> 
+    </MENU>
+</MENUS>
+
+<AFFICHAGE_NOEUDS>
+    <AFFICHAGE_ELEMENT element="EAST" type="division"/>
+    <AFFICHAGE_ELEMENT element="TITRE" type="string">    
+        <PARAMETRE nom="style" valeur="GRAS"/>
+    </AFFICHAGE_ELEMENT>
+    <AFFICHAGE_ELEMENT element="PIEDPAGE_GAUCHE" type="zone"/>
+    <AFFICHAGE_ELEMENT element="PIEDPAGE_DROIT" type="zone"/> 
+    <AFFICHAGE_ELEMENT element="PARTIE" type="division"/>
+    <AFFICHAGE_ELEMENT element="SECTION" type="division"/>
+    <AFFICHAGE_ELEMENT element="PARAGRAPHE" type="zone"/>   
+    <AFFICHAGE_ELEMENT element="LISTE" type="liste"/>
+    <AFFICHAGE_ELEMENT element="EL" type="item"/>   
+</AFFICHAGE_NOEUDS>
+
+<EXPORTS>
+    <EXPORT nom="HTML" sortie="HTML">
+      <FICHIER_XSL nom="EAST.xsl"/>
+    </EXPORT>
+</EXPORTS>
+
+</CONFIGURATION>
